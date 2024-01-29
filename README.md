@@ -1,4 +1,6 @@
 ## Tes Lab React Native App
+
+# Если сломается API мок данные - https://docs.google.com/document/d/1J3cuLnq7eiENLzrtreDMj570rARz_QDqaqWFIh-ekjg/edit?usp=sharing
 Это пример приложения React Native под названием "Tes Lab", демонстрирующий базовое использование React Navigation, Redux Toolkit и Axios для получения данных новостей. Приложение отображает список новостных статей и позволяет пользователям просматривать подробности в модальном окне.
 
 Установите зависимости:
