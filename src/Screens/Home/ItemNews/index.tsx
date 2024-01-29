@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -6,24 +6,24 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-} from 'react-native';
-import {borderRadius, fontSize, height, marginBottom} from '../../../Utils';
-import FastImage from 'react-native-fast-image';
-import {NewsType, RootStackParamList} from '../../../types/types.ts';
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {useDispatch} from 'react-redux';
-import {AppDispatch} from '../../../Store/store.ts';
-import {currentNews} from '../../../Store/news/actions';
+} from "react-native";
+import { borderRadius, fontSize, height, marginBottom } from "../../../Utils";
+import FastImage from "react-native-fast-image";
+import { NewsType, RootStackParamList } from "../../../Types/types.ts";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../Store/store.ts";
+import { currentNews } from "../../../Store/news/actions";
 type Props = {
   item: NewsType;
 };
-const ItemNews = ({item}: Props) => {
+const ItemNews = ({ item }: Props) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const dispatch = useDispatch<AppDispatch>();
   const openModal = React.useCallback(() => {
     dispatch(currentNews(item.id));
-    navigation.push('ModalNews');
+    navigation.push("ModalNews");
   }, [dispatch, item.id, navigation]);
 
   return (
@@ -54,23 +54,23 @@ const styles = StyleSheet.create({
     marginBottom(8),
     borderRadius(6),
     {
-      backgroundColor: 'rgba(0,78,194,0.42)',
-      borderColor: 'rgba(0,0,0,0.3)',
+      backgroundColor: "rgba(0,78,194,0.42)",
+      borderColor: "rgba(0,0,0,0.3)",
       borderWidth: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
+      flexDirection: "row",
+      alignItems: "center",
     },
   ]),
   containerText: StyleSheet.flatten<ViewStyle>([
     {
       flex: 1,
-      height: '100%',
-      justifyContent: 'space-around',
+      height: "100%",
+      justifyContent: "space-around",
     },
   ]),
   image: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     width: 120,
     height: 120,
     marginHorizontal: 12,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   textMain: StyleSheet.flatten<TextStyle>([
     fontSize(16),
     {
-      fontWeight: 'bold',
+      fontWeight: "bold",
     },
   ]),
   text: StyleSheet.flatten<TextStyle>([fontSize(11), {}]),

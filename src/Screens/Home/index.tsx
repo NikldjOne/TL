@@ -13,7 +13,7 @@ import { AppDispatch } from "../../Store/store.ts";
 import { fetchNews } from "../../Store/news/thunks/newsThunks.ts";
 import ItemNews from "./ItemNews";
 import { margin } from "../../Utils";
-import { NewsType } from "../../types/types.ts";
+import { NewsType } from "../../Types/types.ts";
 
 const Home = (): React.JSX.Element => {
   const dispatch = useDispatch<AppDispatch>();

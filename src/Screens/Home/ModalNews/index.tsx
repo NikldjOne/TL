@@ -21,7 +21,7 @@ import {
 } from "../../../Utils";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../../../types/types.ts";
+import { RootStackParamList } from "../../../Types/types.ts";
 
 const ModalNews = () => {
   const { currentNews } = useSelector(selectNewsSlice);
